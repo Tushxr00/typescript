@@ -1,44 +1,33 @@
-// interfaces
-
-interface isPerson {
-    name: string;
-    age: number;
-    speak(a: string): void;
-    spend(a: number): number;
-}
-
-const me: isPerson = {
-    name: "shaun",
-    age: 10,
-    speak(text: string): void {
-        console.log(text);
-    },
-    spend(amount: number): number {
-        console.log("I spent", amount);
-        return amount;
-    },
-};
-
-console.log(me)
-
 // even when we are using typescript we use the ,js instead of .ts while importing
 import { Invoice } from "./modules/Invoice.js"
+import { Payment } from "./modules/Payment.js"
+import { HasFormatter } from "./interfaces/HasFormatter.js"
 
+let docOne: HasFormatter;
+let docTwo: HasFormatter;
 
-const invOne = new Invoice("mario", "work on mario cart", 250)
+docOne = new Invoice("yoshi", "web work", 250)
+docTwo = new Payment("mario", "plumbing work", 250)
 
-const invTwo = new Invoice("luigi", "work on luigi cart", 350)
+let docs: HasFormatter[] = []
 
-// console.log({invOne,invTwo})
+docs.push(docOne)
+docs.push(docTwo)
 
-let invoices: Invoice[] = []
+// const invOne = new Invoice("mario", "work on mario cart", 250)
 
-invoices.push(invOne)
-invoices.push(invTwo)
+// const invTwo = new Invoice("luigi", "work on luigi cart", 350)
 
-invoices.forEach(inv => {
-    console.log(inv.client, inv.amount, inv.format())
-})
+// // console.log({invOne,invTwo})
+
+// let invoices: Invoice[] = []
+
+// invoices.push(invOne)
+// invoices.push(invTwo)
+
+// invoices.forEach(inv => {
+//     console.log(inv.client, inv.amount, inv.format())
+// })
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement
 
@@ -51,10 +40,40 @@ const amount = document.querySelector("#amount") as HTMLInputElement;
 
 form.addEventListener("submit", (event: Event) => {
     event.preventDefault()
-    console.log({
-        type: type.value,
-        tofrom: tofrom.value,
-        details: details.value,
-        amount: amount.valueAsNumber
-    })
+    // console.log({
+    //     type: type.value,
+    //     tofrom: tofrom.value,
+    //     details: details.value,
+    //     amount: amount.valueAsNumber
+    // })
+    let doc: HasFormatter
+    if(type.value === "invoice"){
+        doc = new Invoice(tofrom.value,details.value,amount.valueAsNumber)
+    }else{
+        doc = new Payment(tofrom.value,details.value,amount.valueAsNumber)
+    }
+    console.log(doc)
 })
+
+// // interfaces
+
+// interface isPerson {
+//     name: string;
+//     age: number;
+//     speak(a: string): void;
+//     spend(a: number): number;
+// }
+
+// const me: isPerson = {
+//     name: "shaun",
+//     age: 10,
+//     speak(text: string): void {
+//         console.log(text);
+//     },
+//     spend(amount: number): number {
+//         console.log("I spent", amount);
+//         return amount;
+//     },
+// };
+
+// console.log(me)
