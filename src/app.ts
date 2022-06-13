@@ -1,16 +1,19 @@
 //classes
 class Invoice {
-    // read the value inside and outside the class , cant change the value
-    readonly client: string;
-    // read and change value inside the class, cant read or change the value outside the class
-    private details: string;
-    // read amd change value inside the class and outside the class
-    public amount: number;
+    // // read the value inside and outside the class , cant change the value
+    // readonly client: string;
+    // // read and change value inside the class, cant read or change the value outside the class
+    // private details: string;
+    // // read amd change value inside the class and outside the class
+    // public amount: number;
 
-    constructor(c:string,d:string,a:number){
-        this.client = c
-        this.details = d
-        this.amount = a
+    // doesnt work if we dont have these access modifiers
+    constructor(
+        readonly client : string,
+        private details: string,
+        public amount: number
+    ){
+
     }
 
     format(){
