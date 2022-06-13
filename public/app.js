@@ -38,3 +38,8 @@ let docOne = addUID({ name: "yoshi", age: 40 });
 // as addUID extends object
 // let docTwo = addUID("hiii")
 console.log(docOne);
+const docThree = {
+    uid: 123,
+    resourceNumber: "hi",
+    date: "shaun"
+};

@@ -46,7 +46,7 @@ form.addEventListener("submit", (event: Event) => {
 
 // Generics
 
-const addUID = <T extends {name:string}>(obj: T) => {
+const addUID = <T extends { name: string }>(obj: T) => {
     let uid = Math.floor(Math.random() * 100)
     return { ...obj, uid }
 }
@@ -55,3 +55,15 @@ let docOne = addUID({ name: "yoshi", age: 40 })
 // as addUID extends object
 // let docTwo = addUID("hiii")
 console.log(docOne)
+
+interface Resource<T> {
+    uid: number;
+    resourceNumber: string;
+    date: T;
+}
+
+const docThree: Resource<string> = {
+    uid: 123,
+    resourceNumber: "hi",
+    date: "shaun"
+}
