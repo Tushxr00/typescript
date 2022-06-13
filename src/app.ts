@@ -44,32 +44,15 @@ form.addEventListener("submit", (event: Event) => {
 
 })
 
-// Enums 
+// tuples
 
-enum ResourceType {
-    BOOK,
-    AUTHOR,
-    FILM,
-    DIRECTOR,
-    PERSON,
-}
+let arr = ["ryu", 25, true]
+arr[0] = false
+arr[1] = "yoshi"
 
-interface Resource<T> {
-    uid : number;
-    resourceType: number;
-    data: T,
-}
+arr = [30,false,"yoshi"]
 
-const docOne: Resource<object> ={
-    uid : 1,
-    resourceType: ResourceType.BOOK,
-    data: {title: "name of the wind"},
-}
+// fixed posstions for type
+let tup : [string,number,boolean] = ["ryu", 25, true]
 
-const docTwo: Resource<object> ={
-    uid : 4,
-    resourceType: ResourceType.PERSON,
-    data: {name: "yoshi"},
-}
-
-console.log({docOne,docTwo})
+// tup[0] = 12

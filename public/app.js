@@ -29,23 +29,11 @@ form.addEventListener("submit", (event) => {
     }
     list.render(doc, type.value, "end");
 });
-// Enums 
-var ResourceType;
-(function (ResourceType) {
-    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
-    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
-    ResourceType[ResourceType["FILM"] = 2] = "FILM";
-    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
-    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
-})(ResourceType || (ResourceType = {}));
-const docOne = {
-    uid: 1,
-    resourceType: ResourceType.BOOK,
-    data: { title: "name of the wind" },
-};
-const docTwo = {
-    uid: 4,
-    resourceType: ResourceType.PERSON,
-    data: { name: "yoshi" },
-};
-console.log({ docOne, docTwo });
+// tuples
+let arr = ["ryu", 25, true];
+arr[0] = false;
+arr[1] = "yoshi";
+arr = [30, false, "yoshi"];
+// fixed posstions for type
+let tup = ["ryu", 25, true];
+// tup[0] = 12
