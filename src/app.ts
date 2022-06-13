@@ -163,3 +163,25 @@ ageNumber = "mario"
 ageNumber = { name: "luigi" }
 
 console.log("hello")
+
+
+let greet: Function;
+
+greet = () => {
+    console.log("Hello , World")
+}
+
+// c?: (is an optional parameter)
+const add = (a: number, b: number, c?: number | string) => {
+    console.log(a + b)
+    console.log(c)
+}
+
+add(5, 10)
+
+const subtract = (a: number, b: number, c: number | string=10) => {
+    console.log(a - b)
+    console.log(c)
+}
+
+subtract(5, 10)
