@@ -179,7 +179,7 @@ const add = (a: number, b: number, c?: number | string) => {
 
 add(5, 10)
 
-const minus = (a: number, b: number, c: number | string=10) => {
+const minus = (a: number, b: number, c: number | string = 10) => {
     console.log(a - b)
     console.log(c)
 }
@@ -187,7 +187,19 @@ const minus = (a: number, b: number, c: number | string=10) => {
 minus(5, 10)
 
 // by writting :number after the the function brakcet tell us the type of return value
-const multiply = (a: number, b: number):number=>{
+const multiply = (a: number, b: number): number => {
     return a * b
 }
-const result = multiply(10,12)
+const result = multiply(10, 12)
+
+// Understandin type aliases
+type StringOrNumber = string | number;
+type userObject = { name: string, uid: StringOrNumber }
+
+const lofDetails = (uid: StringOrNumber, item: string) => {
+    console.log(`${item} has a uid of ${uid}`)
+}
+
+const greeting = (user: userObject) => {
+    console.log(`${user.name} says hello`)
+}

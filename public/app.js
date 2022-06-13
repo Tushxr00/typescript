@@ -137,3 +137,9 @@ const multiply = (a, b) => {
     return a * b;
 };
 const result = multiply(10, 12);
+const lofDetails = (uid, item) => {
+    console.log(`${item} has a uid of ${uid}`);
+};
+const greeting = (user) => {
+    console.log(`${user.name} says hello`);
+};
