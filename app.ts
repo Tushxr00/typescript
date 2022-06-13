@@ -104,14 +104,14 @@ isLoggedIn = true
 person = "naruto"
 
 // arrays
-let shinobis:string[] = []
+let shinobis: string[] = []
 
-shinobis =["kakashi","itachi"]
+shinobis = ["kakashi", "itachi"]
 shinobis.push("sasuke")
 
 // union types
-
-let mixedArray: (string|number)[] = []
+//  meed brackets
+let mixedArray: (string | number)[] = []
 
 mixedArray.push("hello")
 mixedArray.push(20)
@@ -119,4 +119,37 @@ mixedArray.push(20)
 // Wrong data type pushed
 // mixedArray.push(false)
 
+
+let uid: string | number;
+uid = "123"
+uid = 123
+
 // objects
+
+let shinobiOne: object;
+shinobiOne = {
+    name: "yoshi",
+    age: 30
+}
+// doesnt throw an error as array is a type of object
+shinobiOne = []
+
+// we can use inference to make typescript know the type of object we need 
+let shinobiTwo: {}
+shinobiTwo = {
+    name: "mario",
+    age: 20
+}
+
+let shinobiThree: {
+    name: string,
+    age: number,
+    isGod: boolean,
+}
+
+shinobiThree={
+    name: "madara",
+    age: 10000,
+    isGod: true,
+
+}

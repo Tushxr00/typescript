@@ -79,9 +79,32 @@ var shinobis = [];
 shinobis = ["kakashi", "itachi"];
 shinobis.push("sasuke");
 // union types
+//  meed brackets
 var mixedArray = [];
 mixedArray.push("hello");
 mixedArray.push(20);
 // Wrong data type pushed
 // mixedArray.push(false)
+var uid;
+uid = "123";
+uid = 123;
 // objects
+var shinobiOne;
+shinobiOne = {
+    name: "yoshi",
+    age: 30
+};
+// doesnt throw an error as array is a type of object
+shinobiOne = [];
+// we can use inference to make typescript know the type of object we need 
+var shinobiTwo;
+shinobiTwo = {
+    name: "mario",
+    age: 20
+};
+var shinobiThree;
+shinobiThree = {
+    name: "madara",
+    age: 10000,
+    isGod: true
+};
