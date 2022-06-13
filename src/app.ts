@@ -203,3 +203,38 @@ const lofDetails = (uid: StringOrNumber, item: string) => {
 const greeting = (user: userObject) => {
     console.log(`${user.name} says hello`)
 }
+
+// Function signature
+
+// let greeted: Function;
+
+// example 1
+
+let greeted: (a: string, b: string) => void
+
+greeted = (name: string, words: string) => {
+    console.log(`${name} says ${words}`)
+}
+
+// example 2
+
+let calc: (a: number, b: number, c: string) => number
+
+calc = (num1: number, num2: number, action: string) => {
+    if (action === "add") {
+        return num1 + num2
+    } else {
+        return num1 - num2
+    }
+}
+
+
+// example 3
+
+let logDetails: (obj: { name: string, age: number }) => void
+
+logDetails = (ninja: { name: string, age: number }) => {
+
+    console.log(`${ninja.name} is ${ninja.age} years old`)
+}
+
