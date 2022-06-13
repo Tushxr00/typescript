@@ -39,3 +39,9 @@ age = 30
 
 // isAdult = "yes"
 isAdult= false
+
+const circumferense = (diameter: number) =>{
+    return diameter * Math.PI
+}
+
+console.log(circumferense("hello"))

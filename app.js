@@ -28,3 +28,7 @@ charecter = "luigi";
 age = 30;
 // isAdult = "yes"
 isAdult = false;
+var circumferense = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circumferense("hello"));
