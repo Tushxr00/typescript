@@ -153,7 +153,11 @@ shinobiThree = {
     isGod: true,
 }
 
+/**
+ * Any makes the type , any whichmeans the variable ca
+ */
+
 let ageNumber: any = 25;
 ageNumber = true
 ageNumber = "mario"
-ageNumber = {name:"luigi"}
+ageNumber = { name: "luigi" }

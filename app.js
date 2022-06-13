@@ -108,6 +108,9 @@ shinobiThree = {
     age: 10000,
     isGod: true
 };
+/**
+ * Any makes the type , any whichmeans the variable ca
+ */
 var ageNumber = 25;
 ageNumber = true;
 ageNumber = "mario";
