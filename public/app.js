@@ -12,7 +12,11 @@ class Invoice {
 }
 const invOne = new Invoice("mario", "work on mario cart", 250);
 const invTwo = new Invoice("luigi", "work on luigi cart", 350);
-console.log({ invOne, invTwo });
+// console.log({invOne,invTwo})
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+console.log(invoices);
 const form = document.querySelector(".new-item-form");
 // inputs
 const type = document.querySelector("#type");
