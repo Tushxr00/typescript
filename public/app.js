@@ -29,17 +29,23 @@ form.addEventListener("submit", (event) => {
     }
     list.render(doc, type.value, "end");
 });
-// Generics
-const addUID = (obj) => {
-    let uid = Math.floor(Math.random() * 100);
-    return Object.assign(Object.assign({}, obj), { uid });
+// Enums 
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTOR"] = 3] = "DIRECTOR";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
+const docOne = {
+    uid: 1,
+    resourceType: ResourceType.BOOK,
+    data: { title: "name of the wind" },
 };
-let docOne = addUID({ name: "yoshi", age: 40 });
-// as addUID extends object
-// let docTwo = addUID("hiii")
-console.log(docOne);
-const docThree = {
-    uid: 123,
-    resourceNumber: "hi",
-    date: "12/2/2012"
+const docTwo = {
+    uid: 4,
+    resourceType: ResourceType.PERSON,
+    data: { name: "yoshi" },
 };
+console.log({ docOne, docTwo });
