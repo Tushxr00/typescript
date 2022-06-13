@@ -1,25 +1,7 @@
-//classes
-class Invoice {
-    // // read the value inside and outside the class , cant change the value
-    // readonly client: string;
-    // // read and change value inside the class, cant read or change the value outside the class
-    // private details: string;
-    // // read amd change value inside the class and outside the class
-    // public amount: number;
+// even when we are using typescript we use the ,js instead of .ts while importing
+import {Invoice} from "./modules/Invoice.js"
 
-    // doesnt work if we dont have these access modifiers
-    constructor(
-        readonly client : string,
-        private details: string,
-        public amount: number
-    ){
 
-    }
-
-    format(){
-        return `${this.client} owes £${this.amount} for ${this.details} `
-    }
-}
 const invOne = new Invoice("mario","work on mario cart", 250)
 
 const invTwo = new Invoice("luigi","work on luigi cart", 350)
