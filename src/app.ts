@@ -4,16 +4,16 @@ import { Payment } from "./modules/Payment.js"
 import { HasFormatter } from "./interfaces/HasFormatter.js"
 import { ListTemplate } from "./modules/ListTemplate.js";
 
-let docOne: HasFormatter;
-let docTwo: HasFormatter;
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
 
-docOne = new Invoice("yoshi", "web work", 250)
-docTwo = new Payment("mario", "plumbing work", 250)
+// docOne = new Invoice("yoshi", "web work", 250)
+// docTwo = new Payment("mario", "plumbing work", 250)
 
-let docs: HasFormatter[] = []
+// let docs: HasFormatter[] = []
 
-docs.push(docOne)
-docs.push(docTwo)
+// docs.push(docOne)
+// docs.push(docTwo)
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement
 
@@ -40,6 +40,18 @@ form.addEventListener("submit", (event: Event) => {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
     }
 
-    list.render(doc,type.value,"end")
+    list.render(doc, type.value, "end")
 
 })
+
+// Generics
+
+const addUID = <T extends {name:string}>(obj: T) => {
+    let uid = Math.floor(Math.random() * 100)
+    return { ...obj, uid }
+}
+
+let docOne = addUID({ name: "yoshi", age: 40 })
+// as addUID extends object
+// let docTwo = addUID("hiii")
+console.log(docOne)

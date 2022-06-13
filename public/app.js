@@ -2,13 +2,13 @@
 import { Invoice } from "./modules/Invoice.js";
 import { Payment } from "./modules/Payment.js";
 import { ListTemplate } from "./modules/ListTemplate.js";
-let docOne;
-let docTwo;
-docOne = new Invoice("yoshi", "web work", 250);
-docTwo = new Payment("mario", "plumbing work", 250);
-let docs = [];
-docs.push(docOne);
-docs.push(docTwo);
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+// docOne = new Invoice("yoshi", "web work", 250)
+// docTwo = new Payment("mario", "plumbing work", 250)
+// let docs: HasFormatter[] = []
+// docs.push(docOne)
+// docs.push(docTwo)
 const form = document.querySelector(".new-item-form");
 // inputs
 const type = document.querySelector("#type");
@@ -29,3 +29,12 @@ form.addEventListener("submit", (event) => {
     }
     list.render(doc, type.value, "end");
 });
+// Generics
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let docOne = addUID({ name: "yoshi", age: 40 });
+// as addUID extends object
+// let docTwo = addUID("hiii")
+console.log(docOne);
