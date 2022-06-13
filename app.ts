@@ -147,9 +147,13 @@ let shinobiThree: {
     isGod: boolean,
 }
 
-shinobiThree={
+shinobiThree = {
     name: "madara",
     age: 10000,
     isGod: true,
-
 }
+
+let ageNumber: any = 25;
+ageNumber = true
+ageNumber = "mario"
+ageNumber = {name:"luigi"}

@@ -108,3 +108,7 @@ shinobiThree = {
     age: 10000,
     isGod: true
 };
+var ageNumber = 25;
+ageNumber = true;
+ageNumber = "mario";
+ageNumber = { name: "luigi" };
