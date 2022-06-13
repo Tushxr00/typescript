@@ -41,5 +41,5 @@ console.log(docOne);
 const docThree = {
     uid: 123,
     resourceNumber: "hi",
-    date: "shaun"
+    date: "12/2/2012"
 };

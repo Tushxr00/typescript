@@ -65,5 +65,6 @@ interface Resource<T> {
 const docThree: Resource<string> = {
     uid: 123,
     resourceNumber: "hi",
-    date: "shaun"
+    date: "12/2/2012"
 }
+
