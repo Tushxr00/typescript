@@ -1,15 +1,26 @@
-// const anchor = document.querySelector("a")!;
+//classes
+class Invoice {
+    client: string;
+    details: string;
+    amount: number;
 
-// // if (anchor) {
-// //     console.log(anchor.href)
-// // }
+    constructor(c:string,d:string,a:number){
+        this.client = c
+        this.details = d
+        this.amount = a
+    }
 
-// console.log(anchor.href)
+    format(){
+        return `${this.client} owes £${this.amount} for ${this.details} `
+    }
+}
+const invOne = new Invoice("mario","work on mario cart", 250)
 
-// const form = document.querySelector("form")!
-// dont need ! at the end while using as
+const invTwo = new Invoice("luigi","work on luigi cart", 350)
+
+console.log({invOne,invTwo})
+
 const form = document.querySelector(".new-item-form") as HTMLFormElement
-// console.log(form.children)
 
 // inputs
 
@@ -21,9 +32,9 @@ const amount = document.querySelector("#amount") as HTMLInputElement;
 form.addEventListener("submit", (event: Event) => {
     event.preventDefault()
     console.log({
-        type:type.value,
-        tofrom:tofrom.value,
-        details:details.value,
-        amount:amount.valueAsNumber
+        type: type.value,
+        tofrom: tofrom.value,
+        details: details.value,
+        amount: amount.valueAsNumber
     })
 })

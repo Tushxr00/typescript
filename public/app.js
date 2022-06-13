@@ -1,13 +1,19 @@
 "use strict";
-// const anchor = document.querySelector("a")!;
-// // if (anchor) {
-// //     console.log(anchor.href)
-// // }
-// console.log(anchor.href)
-// const form = document.querySelector("form")!
-// dont need ! at the end while using as
+//classes
+class Invoice {
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes £${this.amount} for ${this.details} `;
+    }
+}
+const invOne = new Invoice("mario", "work on mario cart", 250);
+const invTwo = new Invoice("luigi", "work on luigi cart", 350);
+console.log({ invOne, invTwo });
 const form = document.querySelector(".new-item-form");
-// console.log(form.children)
 // inputs
 const type = document.querySelector("#type");
 const tofrom = document.querySelector("#tofrom");
