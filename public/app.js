@@ -127,8 +127,13 @@ const add = (a, b, c) => {
     console.log(c);
 };
 add(5, 10);
-const subtract = (a, b, c = 10) => {
+const minus = (a, b, c = 10) => {
     console.log(a - b);
     console.log(c);
 };
-subtract(5, 10);
+minus(5, 10);
+// by writting :number after the the function brakcet tell us the type of return value
+const multiply = (a, b) => {
+    return a * b;
+};
+const result = multiply(10, 12);
