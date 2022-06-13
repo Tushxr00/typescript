@@ -91,3 +91,32 @@ ninja.name = "ryu"
 //     name: "yoshi",
 //     belt: "orange",
 // }
+
+// axplicit types
+let person: string;
+let currentAge: number;
+let isLoggedIn: boolean;
+
+age = 30
+
+isLoggedIn = true
+
+person = "naruto"
+
+// arrays
+let shinobis:string[] = []
+
+shinobis =["kakashi","itachi"]
+shinobis.push("sasuke")
+
+// union types
+
+let mixedArray: (string|number)[] = []
+
+mixedArray.push("hello")
+mixedArray.push(20)
+
+// Wrong data type pushed
+// mixedArray.push(false)
+
+// objects

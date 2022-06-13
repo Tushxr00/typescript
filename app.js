@@ -67,3 +67,21 @@ ninja.name = "ryu";
 //     name: "yoshi",
 //     belt: "orange",
 // }
+// axplicit types
+var person;
+var currentAge;
+var isLoggedIn;
+age = 30;
+isLoggedIn = true;
+person = "naruto";
+// arrays
+var shinobis = [];
+shinobis = ["kakashi", "itachi"];
+shinobis.push("sasuke");
+// union types
+var mixedArray = [];
+mixedArray.push("hello");
+mixedArray.push(20);
+// Wrong data type pushed
+// mixedArray.push(false)
+// objects
