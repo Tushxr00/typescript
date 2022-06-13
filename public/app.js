@@ -1,3 +1,16 @@
+// interfaces
+const me = {
+    name: "shaun",
+    age: 10,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log("I spent", amount);
+        return amount;
+    },
+};
+console.log(me);
 // even when we are using typescript we use the ,js instead of .ts while importing
 import { Invoice } from "./modules/Invoice.js";
 const invOne = new Invoice("mario", "work on mario cart", 250);
