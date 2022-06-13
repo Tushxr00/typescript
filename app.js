@@ -31,4 +31,18 @@ isAdult = false;
 var circumferense = function (diameter) {
     return diameter * Math.PI;
 };
+// allows us to type check during development 
 console.log(circumferense(12));
+// Array 
+var names = ["luigi", "mario", "yoshi"];
+names.push("toad");
+// not assignable to the array
+// names.push(8)
+// not assignable to the array
+// names[0] = 12
+// how to have a mixed array
+var mixed = ["ken", 4, "chun-li", 8, 9];
+mixed.push("ryu-ji");
+mixed.push(6);
+mixed[0] = 3;
+// Objects

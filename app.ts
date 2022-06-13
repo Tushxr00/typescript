@@ -38,10 +38,29 @@ charecter = "luigi"
 age = 30
 
 // isAdult = "yes"
-isAdult= false
+isAdult = false
 
-const circumferense = (diameter: number) =>{
+const circumferense = (diameter: number) => {
     return diameter * Math.PI
 }
 
+// allows us to type check during development 
 console.log(circumferense(12))
+
+// Array 
+
+let names = ["luigi", "mario", "yoshi"]
+
+names.push("toad")
+// not assignable to the array
+// names.push(8)
+// not assignable to the array
+// names[0] = 12
+
+// how to have a mixed array
+let mixed = ["ken", 4, "chun-li", 8, 9]
+mixed.push("ryu-ji")
+mixed.push(6)
+mixed[0] = 3
+
+// Objects
