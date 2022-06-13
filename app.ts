@@ -51,6 +51,8 @@ console.log(circumferense(12))
 
 let names = ["luigi", "mario", "yoshi"]
 
+// names = 12
+
 names.push("toad")
 // not assignable to the array
 // names.push(8)
@@ -64,3 +66,28 @@ mixed.push(6)
 mixed[0] = 3
 
 // Objects
+let ninja = {
+    name: "mario",
+    belt: "black",
+    age: 30,
+}
+
+ninja.age = 40
+ninja.name = "ryu"
+
+// ninja.age ="30"
+// ninja.name = 1202
+
+// since it was not declared during creation it will throw an error
+// ninja.skills = ["fighting","sneaking"]
+
+/**
+ * since the object doesnt have the same format , as to when it was intiliazed
+ * Hence it throws an error 
+ * Hence we cant add or remove the object properties after intializing
+ */
+
+// ninja = {
+//     name: "yoshi",
+//     belt: "orange",
+// }
