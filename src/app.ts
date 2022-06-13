@@ -1,8 +1,11 @@
 //classes
 class Invoice {
-    client: string;
-    details: string;
-    amount: number;
+    // read the value inside and outside the class , cant change the value
+    readonly client: string;
+    // read and change value inside the class, cant read or change the value outside the class
+    private details: string;
+    // read amd change value inside the class and outside the class
+    public amount: number;
 
     constructor(c:string,d:string,a:number){
         this.client = c
@@ -25,7 +28,9 @@ let invoices : Invoice[]=[]
 invoices.push(invOne)
 invoices.push(invTwo)
 
-console.log(invoices)
+invoices.forEach(inv =>{
+    console.log(inv.client,inv.amount,inv.format())
+})
 
 const form = document.querySelector(".new-item-form") as HTMLFormElement
 
