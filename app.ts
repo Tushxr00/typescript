@@ -1,22 +1,18 @@
-const number = 12;
+// const number = 12;
 
-console.log(number);
+// console.log(number);
 
-const firstname = "luige";
+// const firstname = "luige";
 
-console.log(firstname)
+// console.log(firstname)
 
-const input = document.querySelectorAll("input")
+// const input = document.querySelectorAll("input")
 
-console.log(input)
+// console.log(input)
 
-input.forEach(input=>{
-    console.log(input)
-})
-
-
-
-
+// input.forEach(input=>{
+//     console.log(input)
+// })
 
 /**
  * * tsc app.ts  
@@ -25,4 +21,21 @@ input.forEach(input=>{
  * by writting "tsc app.ts -w" we can watch a file and re complie or transpile it whenever there is any new changes to it
  * 
  * 
- */ 
+ */
+
+/**
+ * Typescript infers the type based on the 
+ * value it sees is being assigned 
+ */
+let charecter = "mario"
+let age = 22
+let isAdult = true
+
+// charecter = 30
+charecter = "luigi"
+
+// age = "yoshi"
+age = 30
+
+// isAdult = "yes"
+isAdult= false
