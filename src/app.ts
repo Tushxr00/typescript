@@ -43,16 +43,3 @@ form.addEventListener("submit", (event: Event) => {
     list.render(doc, type.value, "end")
 
 })
-
-// tuples
-
-let arr = ["ryu", 25, true]
-arr[0] = false
-arr[1] = "yoshi"
-
-arr = [30,false,"yoshi"]
-
-// fixed posstions for type
-let tup : [string,number,boolean] = ["ryu", 25, true]
-
-// tup[0] = 12
