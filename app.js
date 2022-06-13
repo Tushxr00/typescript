@@ -31,4 +31,4 @@ isAdult = false;
 var circumferense = function (diameter) {
     return diameter * Math.PI;
 };
-console.log(circumferense("hello"));
+console.log(circumferense(12));

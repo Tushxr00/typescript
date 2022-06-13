@@ -44,4 +44,4 @@ const circumferense = (diameter: number) =>{
     return diameter * Math.PI
 }
 
-console.log(circumferense("hello"))
+console.log(circumferense(12))
