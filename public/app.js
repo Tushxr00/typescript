@@ -1,3 +1,4 @@
+"use strict";
 // const number = 12;
 // console.log(number);
 // const firstname = "luige";
@@ -19,22 +20,22 @@
  * Typescript infers the type based on the
  * value it sees is being assigned
  */
-var charecter = "mario";
-var age = 22;
-var isAdult = true;
+let charecter = "mario";
+let age = 22;
+let isAdult = true;
 // charecter = 30
 charecter = "luigi";
 // age = "yoshi"
 age = 30;
 // isAdult = "yes"
 isAdult = false;
-var circumferense = function (diameter) {
+const circumferense = (diameter) => {
     return diameter * Math.PI;
 };
 // allows us to type check during development 
 console.log(circumferense(12));
 // Array 
-var names = ["luigi", "mario", "yoshi"];
+let names = ["luigi", "mario", "yoshi"];
 // names = 12
 names.push("toad");
 // not assignable to the array
@@ -42,15 +43,15 @@ names.push("toad");
 // not assignable to the array
 // names[0] = 12
 // how to have a mixed array
-var mixed = ["ken", 4, "chun-li", 8, 9];
+let mixed = ["ken", 4, "chun-li", 8, 9];
 mixed.push("ryu-ji");
 mixed.push(6);
 mixed[0] = 3;
 // Objects
-var ninja = {
+let ninja = {
     name: "mario",
     belt: "black",
-    age: 30
+    age: 30,
 };
 ninja.age = 40;
 ninja.name = "ryu";
@@ -68,28 +69,28 @@ ninja.name = "ryu";
 //     belt: "orange",
 // }
 // axplicit types
-var person;
-var currentAge;
-var isLoggedIn;
+let person;
+let currentAge;
+let isLoggedIn;
 age = 30;
 isLoggedIn = true;
 person = "naruto";
 // arrays
-var shinobis = [];
+let shinobis = [];
 shinobis = ["kakashi", "itachi"];
 shinobis.push("sasuke");
 // union types
 //  meed brackets
-var mixedArray = [];
+let mixedArray = [];
 mixedArray.push("hello");
 mixedArray.push(20);
 // Wrong data type pushed
 // mixedArray.push(false)
-var uid;
+let uid;
 uid = "123";
 uid = 123;
 // objects
-var shinobiOne;
+let shinobiOne;
 shinobiOne = {
     name: "yoshi",
     age: 30
@@ -97,21 +98,22 @@ shinobiOne = {
 // doesnt throw an error as array is a type of object
 shinobiOne = [];
 // we can use inference to make typescript know the type of object we need 
-var shinobiTwo;
+let shinobiTwo;
 shinobiTwo = {
     name: "mario",
     age: 20
 };
-var shinobiThree;
+let shinobiThree;
 shinobiThree = {
     name: "madara",
     age: 10000,
-    isGod: true
+    isGod: true,
 };
 /**
  * Any makes the type , any whichmeans the variable ca
  */
-var ageNumber = 25;
+let ageNumber = 25;
 ageNumber = true;
 ageNumber = "mario";
 ageNumber = { name: "luigi" };
+console.log("hello");

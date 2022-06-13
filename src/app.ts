@@ -161,3 +161,5 @@ let ageNumber: any = 25;
 ageNumber = true
 ageNumber = "mario"
 ageNumber = { name: "luigi" }
+
+console.log("hello")
